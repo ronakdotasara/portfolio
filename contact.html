@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ronak Dotasara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Ronak Dotasara</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="contact.html" class="btn">Let's talk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h2>Let's work <span class="highlight">together</span>.</h2>
+                <p class="intro">
+                    I'm always open to exciting collaborations, innovative project ideas, or simply helping fellow engineers and students. 
+                    If you'd like to discuss an idea, need guidance, or want to work together, feel free to reach out!
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-details">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h3>Get in Touch</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject (Optional)</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry-type">Type of Inquiry</label>
+                                <select id="inquiry-type" name="inquiry-type">
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="project-guidance">Project Guidance</option>
+                                    <option value="general-query">General Query</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        <div id="form-success" class="hidden">
+                            <p>Thank you! I'll get back to you soon.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div class="text">
+                                <h4>Email</h4>
+                                <p>ronak.engineer@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="text">
+                                <h4>Location</h4>
+                                <p>Hamirpur, Himachal Pradesh, India</p>
+                                <p class="sub-text">(Open to remote collaboration too!)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon"><i class="fas fa-clock"></i></div>
+                            <div class="text">
+                                <h4>Availability</h4>
+                                <p>Available for collaboration on weekends and evenings</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Connect With Me</h4>
+                            <div class="social-icons">
+                                <a href="https://in.linkedin.com/in/ronak-dotasara-a35016301" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/ronakdotasara" target="_blank" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ronak_dotasara/" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <h2>Ronak Dotasara</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="projects.html">PROJECTS</a>
+                    <a href="education.html">EDUCATION</a>
+                    <a href="skills.html">SKILLS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2025 All rights reserved by Ronak Dotasara</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the data to your backend
+            // For demonstration, just show the success message
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('form-success').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

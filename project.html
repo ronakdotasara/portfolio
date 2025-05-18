@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ronak Dotasara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Ronak Dotasara</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="contact.html" class="btn">Let's talk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="projects-hero">
+            <div class="container">
+                <h2>My <span class="highlight">Projects</span></h2>
+                <p class="intro">
+                    Exploring innovation through practical applications in robotics, IoT, and machine learning. 
+                    Here's a showcase of my technical journey and problem-solving approach.
+                </p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Completed Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">04</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">03</div>
+                        <div class="stat-label">Tech Competitions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-label">Filter by:</div>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="nimbus">NIMBUS</button>
+                        <button class="filter-btn" data-filter="iot">IoT</button>
+                        <button class="filter-btn" data-filter="robotics">Robotics</button>
+                        <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    </div>
+                </div>
+
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-categories="nimbus">
+                        <div class="project-image">
+                            <img src="/img/8.jpg" alt="Railway Signal Detector">
+                            <div class="project-date">April 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Railway Signal Detector</h3>
+                                <div class="project-tags">
+                                    <span class="tag">NIMBUS 2025</span>
+                                    <span class="tag">LoRa</span>
+                                    <span class="tag">ESP32</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An innovative system enabling trains to receive signal information 2km in advance during 
+                                foggy conditions, enhancing safety and preventing accidents.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Challenge</h4>
+                                    <p>During foggy conditions, train operators often struggle to see railway signals in time, 
+                                       increasing accident risks. Traditional visual signals become ineffective in poor visibility.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Solution</h4>
+                                    <p>Implemented LoRa communication technology with ESP microcontrollers to create a reliable 
+                                       wireless communication system that's effective even in adverse weather conditions.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Long-range signal transmission (up to 2km) in adverse weather</li>
+                                        <li>Directional antennas for accurate signal targeting</li>
+                                        <li>Low-power consumption for sustainable operation</li>
+                                        <li>Real-time signal status updates to train operators</li>
+                                        <li>Weather-resistant hardware design</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Team Member - Responsible for LoRa communication protocol implementation and antenna design</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-categories="nimbus iot">
+                        <div class="project-image">
+                            <img src="/img/7.jpg" alt="FireVolt Green">
+                            <div class="project-date">April 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>FireVolt Green</h3>
+                                <div class="project-tags">
+                                    <span class="tag">NIMBUS 2025</span>
+                                    <span class="tag">Renewable Energy</span>
+                                    <span class="tag">ThermoElectric</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An eco-friendly system that converts agricultural waste combustion into usable electricity 
+                                using ThermoElectric Generators while minimizing air pollution.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Challenge</h4>
+                                    <p>Open-field burning of agricultural waste causes severe air pollution. 
+                                       Farmers need sustainable alternatives that also provide tangible benefits.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Solution</h4>
+                                    <p>Designed a system that uses ThermoElectric Generators to convert heat from controlled 
+                                       agricultural waste combustion into electricity, while integrated filtration minimizes emissions.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>HEPA and Carbon filtration systems for emissions control</li>
+                                        <li>ThermoElectric Generators for electricity production</li>
+                                        <li>Controlled combustion chamber for efficient burning</li>
+                                        <li>Power storage system for later use</li>
+                                        <li>Mobile design for farm deployment</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Team Member - Led the electrical generation and storage subsystem development</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-categories="ai robotics">
+                        <div class="project-image">
+                            <img src="/img/2.jpg" alt="Autonomous Raspberry Pi Car">
+                            <div class="project-date">March 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Autonomous Raspberry Pi Car</h3>
+                                <div class="project-tags">
+                                    <span class="tag">Pre-NIMBUS</span>
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Computer Vision</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An AI-powered autonomous vehicle using Raspberry Pi with advanced computer vision capabilities 
+                                for lane following, traffic light detection, and obstacle avoidance.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Challenge</h4>
+                                    <p>Creating an accessible autonomous driving platform that demonstrates core 
+                                       self-driving capabilities using affordable hardware.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Solution</h4>
+                                    <p>Built a small-scale car platform using Raspberry Pi 4 with camera integration and 
+                                       implemented various computer vision algorithms for autonomous navigation.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Real-time lane detection and following</li>
+                                        <li>Traffic light recognition using YOLOv4</li>
+                                        <li>OCR for reading road signs</li>
+                                        <li>Ultrasonic sensors for obstacle detection</li>
+                                        <li>Real-time decision making system</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Technologies</h4>
+                                    <p>Raspberry Pi 4, OpenCV, YOLOv4, OCR, Python, TensorFlow Lite</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Lead Developer - Designed and implemented the entire system</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-categories="iot ai">
+                        <div class="project-image">
+                            <img src="/img/4.jpg" alt="Smart Electric Meter">
+                            <div class="project-date">March 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Smart Electric Meter</h3>
+                                <div class="project-tags">
+                                    <span class="tag">Electrothon</span>
+                                    <span class="tag">IoT</span>
+                                    <span class="tag">AI/ML</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An IoT-based solution using artificial intelligence for accurate energy monitoring 
+                                and theft prevention with automated billing capabilities.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Challenge</h4>
+                                    <p>Electricity theft and inaccurate metering cause significant losses to power companies. 
+                                       Traditional meters lack real-time monitoring capabilities.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Solution</h4>
+                                    <p>Developed a smart meter using Raspberry Pi with current sensors that continuously 
+                                       monitors power consumption patterns and detects anomalies indicative of theft.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Real-time energy consumption monitoring</li>
+                                        <li>Anomaly detection using machine learning</li>
+                                        <li>Automated digital billing system</li>
+                                        <li>Remote monitoring via mobile app</li>
+                                        <li>Tamper detection and alerts</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Team Member - Responsible for ML algorithm development and sensor integration</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-categories="iot">
+                        <div class="project-image">
+                            <img src="/img/5.jpg" alt="Smart IoT-Based Power-Saving Access Control System">
+                            <div class="project-date">April 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Smart IoT-Based Power-Saving Access Control System</h3>
+                                <div class="project-tags">
+                                    <span class="tag">Buildathon</span>
+                                    <span class="tag">IoT</span>
+                                    <span class="tag">ESP32</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                An energy-efficient access control system that manages room entry and 
+                                automatically regulates power usage based on occupancy.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Challenge</h4>
+                                    <p>Unnecessary power consumption in empty rooms and security concerns 
+                                       in accessing facilities require an integrated solution.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Solution</h4>
+                                    <p>Created a system using ESP32 that provides secure access control via RFID and keypad 
+                                       while automatically managing power to lights and appliances based on room occupancy.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Dual authentication with RFID and keypad</li>
+                                        <li>Blynk IoT app for remote monitoring and control</li>
+                                        <li>Motion sensors for occupancy detection</li>
+                                        <li>Automated power management</li>
+                                        <li>Access logs and reports</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Technologies</h4>
+                                    <p>ESP32, RFID-RC522, Relay Modules, PIR Sensors, Blynk IoT Platform</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Lead Developer - Designed and implemented the entire system</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-categories="nimbus robotics">
+                        <div class="project-image">
+                            <img src="/img/6.jpg" alt="Drone Development">
+                            <div class="project-date">April 2025</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Drone Development</h3>
+                                <div class="project-tags">
+                                    <span class="tag">NIMBUS Workshop</span>
+                                    <span class="tag">Robotics</span>
+                                    <span class="tag">Flight Control</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Designed and built a functional drone during a workshop conducted by the NIMBUS core team, 
+                                gaining hands-on experience with drone electronics and assembly.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Learning Outcomes</h4>
+                                    <ul>
+                                        <li>Understanding drone frame design and structural considerations</li>
+                                        <li>Configuration of flight controllers and ESCs</li>
+                                        <li>Propulsion system calculations and motor selection</li>
+                                        <li>Battery management and power distribution</li>
+                                        <li>Calibration and flight testing procedures</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Specifications</h4>
+                                    <p>Quadcopter configuration, F4 flight controller, 2300KV brushless motors, 
+                                    30A ESCs, 3S LiPo battery, 5.8GHz video transmitter system</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Workshop Participant - Assembled complete drone and participated in test flights</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card" data-categories="ai">
+                        <div class="project-image">
+                            <img src="/img/3.jpg" alt="ADAS Level 2">
+                            <div class="project-date">August 2024 - Present</div>
+                            <div class="project-status">In Progress</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>ADAS Level 2</h3>
+                                <div class="project-tags">
+                                    <span class="tag">Electrothon</span>
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Automotive</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Developing an Advanced Driver Assistance System with real-time processing capabilities 
+                                for vehicle safety and semi-autonomous driving features.
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <h4>Project Goals</h4>
+                                    <ul>
+                                        <li>Create affordable ADAS solution compatible with existing vehicles</li>
+                                        <li>Implement real-time object detection and tracking</li>
+                                        <li>Develop lane departure warning system</li>
+                                        <li>Design adaptive cruise control algorithm</li>
+                                        <li>Build driver monitoring system</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Current Progress</h4>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 60%;">60%</div>
+                                    </div>
+                                    <ul class="progress-list">
+                                        <li class="completed">Camera and sensor integration</li>
+                                        <li class="completed">Object detection algorithm implementation</li>
+                                        <li class="completed">Lane detection system</li>
+                                        <li class="in-progress">Driver monitoring system</li>
+                                        <li>Control system integration</li>
+                                        <li>Real-world testing and validation</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Technologies</h4>
+                                    <p>NVIDIA Jetson Nano, OpenCV, TensorFlow, Python, Camera Arrays, Ultrasonic Sensors</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card" data-categories="robotics">
+                        <div class="project-image">
+                            <img src="/img/9.png" alt="ATL Lab Robotics Projects">
+                            <div class="project-date">August 2019 - April 2022</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>ATL Lab Robotics Projects</h3>
+                                <div class="project-tags">
+                                    <span class="tag">ATL Lab</span>
+                                    <span class="tag">Robotics</span>
+                                    <span class="tag">IoT</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A series of robotics and electronics projects developed at the Atal Tinkering Lab, 
+                                showcasing progression in embedded systems and automation.
+                            </p>
+                            <div class="project-details">
+                                <!--
+                                 <div class="project-gallery">
+                                    <div class="gallery-item">
+                                        <img src="/api/placeholder/280/180" alt="Radar System">
+                                        <div class="gallery-caption">Radar System</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="/api/placeholder/280/180" alt="Bluetooth Controlled Car">
+                                        <div class="gallery-caption">Bluetooth Car</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="/api/placeholder/280/180" alt="Obstacle Avoidance Robot">
+                                        <div class="gallery-caption">Obstacle Avoidance</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="/api/placeholder/280/180" alt="Weather Station">
+                                        <div class="gallery-caption">Weather Station</div>
+                                    </div>
+                                </div>
+                                -->
+                               
+                                <div class="detail-item">
+                                    <h4>Key Projects</h4>
+                                    <ul>
+                                        <li><strong>Radar System:</strong> Built an ultrasonic-based object detection system with rotating sensor</li>
+                                        <li><strong>Bluetooth Controlled Car:</strong> Remote controlled vehicle using HC-05 Bluetooth module</li>
+                                        <li><strong>Obstacle Avoidance Robot:</strong> Autonomous robot with IR and ultrasonic sensors</li>
+                                        <li><strong>Weather Station:</strong> DHT11 sensor based temperature and humidity monitoring system</li>
+                                        <li><strong>Smart Dustbin:</strong> Automated lid with proximity detection for touchless operation</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Skills Gained</h4>
+                                    <p>Arduino programming, sensor integration, circuit design, 3D printing, mechanical assembly, 
+                                       troubleshooting, IoT protocols, motor control, power management</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4>Role</h4>
+                                    <p>Team Member - Participated in project planning, design, implementation and demonstration</p>
+                                </div>
+                            </div>
+                            <a href="#" class="project-link">View Project Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Interested in collaborating?</h2>
+                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                    <a href="contact.html" class="cta-btn">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <h2>Ronak Dotasara</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="projects.html">PROJECTS</a>
+                    <a href="education.html">EDUCATION</a>
+                    <a href="skills.html">SKILLS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2025 All rights reserved by Ronak Dotasara</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-categories');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
