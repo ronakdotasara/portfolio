@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ronak Dotasara</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --card-radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 80px 0 40px;
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 24px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .timeline {
+            padding: 60px 0;
+        }
+
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--accent);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40px;
+            position: relative;
+            margin-bottom: 40px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 40px;
+            margin-left: auto;
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--card-radius);
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .timeline-date {
+            background-color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .timeline-content p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .skills {
+            padding: 60px 0;
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            flex: 1 1 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: var(--accent);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: rgba(99, 102, 241, 0.1);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .skill-tag:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .experience {
+            padding: 60px 0;
+        }
+
+        .experience-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .experience-card {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .experience-card h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .experience-card .date {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .experience-card p {
+            color: var(--text-secondary);
+        }
+
+        .gallery {
+            padding: 60px 0;
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .interests {
+            padding: 60px 0;
+        }
+
+        .interests-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .interest-item {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .interest-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .interest-icon {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .interest-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .interest-item p {
+            color: var(--text-secondary);
+        }
+
+        .achievements {
+            padding: 60px 0;
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+
+        .achievements-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-card {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .achievement-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .achievement-card p {
+            color: var(--text-secondary);
+        }
+
+        .contact {
+            padding: 60px 0;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .contact-info {
+            flex: 1 1 300px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .timeline-container::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 50px;
+            }
+
+            .timeline-item:nth-child(even) {
+                padding-left: 50px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Ronak Dotasara</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="/project.html">Projects</a>
+                    <a href="education.html">Education</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <a href="contact.html" class="cta-button">Let's talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="/img/1.jpg" alt="Ronak Dotasara">
+        </div>
+        <div class="hero-text">
+            <h1>Ronak Dotasara</h1>
+            <h2>Electrical Engineer & Web Developer</h2>
+        </div>
+        <div class="bio container">
+            <p>I am an Electrical Engineering student at NIT Hamirpur with a passion for technology and innovation. My interests span across various domains including Web Development, Robotics, IoT, and Video Production. I enjoy taking on challenging projects that allow me to combine my technical skills with creative problem-solving.</p>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">September 2024 - Present</span>
+                        <h3>National Institute of Technology, Hamirpur</h3>
+                        <p>Started my B.Tech in Electrical Engineering, embarking on my journey in the field of technology and engineering.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2024 - Present</span>
+                        <h3>Full-Stack Web Developer</h3>
+                        <p>Designing and developing WordPress websites with database management capabilities at ronakdotasara.in/.me</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - Present</span>
+                        <h3>SPEC & OJAS Club Member</h3>
+                        <p>Active volunteer at Society for Promotion of Electronic Culture and contributing member of OJAS technical club at NIT Hamirpur.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2023 - 2024</span>
+                        <h3>BPS Convent School, Laxmangarh</h3>
+                        <p>Completed Class XII (CBSE) with 77% marks, focusing on science and mathematics.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2022 - 2023</span>
+                        <h3>BPS Convent School, Laxmangarh</h3>
+                        <p>Completed Class XII (CBSE) with 72.40% marks, building a strong foundation in science subjects.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2019 - April 2022</span>
+                        <h3>Atal Tinkering Lab, Laxmangarh</h3>
+                        <p>Served as Lab Representative and mentor, gaining hands-on experience in robotics and electronics.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2021 - 2022</span>
+                        <h3>BPS Convent School, Laxmangarh</h3>
+                        <p>Completed Class X (CBSE) with an outstanding 98.40% marks, demonstrating academic excellence.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">HTML</div>
+                        <div class="skill-tag">CSS</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">C++</div>
+                        <div class="skill-tag">Python</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Software & Tools</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">TinkerCAD</div>
+                        <div class="skill-tag">Premiere Pro</div>
+                        <div class="skill-tag">After Effects</div>
+                        <div class="skill-tag">MATLAB</div>
+                        <div class="skill-tag">PowerPoint</div>
+                        <div class="skill-tag">WordPress</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Electronics</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Raspberry Pi</div>
+                        <div class="skill-tag">Arduino</div>
+                        <div class="skill-tag">ESP</div>
+                        <div class="skill-tag">Circuit Design</div>
+                        <div class="skill-tag">PCB Layout</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Areas of Interest</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Web Development</div>
+                        <div class="skill-tag">Robotics</div>
+                        <div class="skill-tag">IoT</div>
+                        <div class="skill-tag">AI/ML</div>
+                        <div class="skill-tag">OpenCV</div>
+                        <div class="skill-tag">Wireless Communication</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Creative Skills</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Video Editing</div>
+                        <div class="skill-tag">Photography</div>
+                        <div class="skill-tag">Drone Technology</div>
+                        <div class="skill-tag">Content Creation</div>
+                        <div class="skill-tag">UI/UX Design</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages & Other Skills</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">English</div>
+                        <div class="skill-tag">Hindi</div>
+                        <div class="skill-tag">Martial Arts</div>
+                        <div class="skill-tag">Team Management</div>
+                        <div class="skill-tag">Public Speaking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Activities</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <h3>Wordpress Website Designer</h3>
+                    <h4>ronakdotasara.in/.me</h4>
+                    <div class="date">January 2024 - Present</div>
+                    <p>Working as a Full-Stack Web Developer with expertise in WordPress and database management. Designing, developing, and maintaining websites for various clients with a focus on user experience and functionality.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>SPEC Volunteer</h3>
+                    <h4>Society for Promotion of Electronic Culture</h4>
+                    <div class="date">2024 - Present</div>
+                    <p>Active volunteer contributing to events and activities promoting electronic culture at NIT Hamirpur. Participating in workshops, technical events, and community outreach programs to foster interest in electronics and technology.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>OJAS Club Member</h3>
+                    <h4>NIMBUS, NIT Hamirpur</h4>
+                    <div class="date">2024 - Present</div>
+                    <p>Contributing member of the OJAS technical club, participating in various technical projects and events. Collaborating with team members to design and implement innovative solutions for real-world problems.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Lab Representative and Mentor</h3>
+                    <h4>Atal Tinkering Lab, Laxmangarh</h4>
+                    <div class="date">January 2019 - April 2022</div>
+                    <p>Actively participated in the ATL Lab at BPS Convent School, gaining hands-on experience in robotics and electronics. Mentored junior students, conducted workshops, and led projects to encourage innovation and creativity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Project Showcase">
+                    <div class="gallery-caption">
+                        <h3>Electronics Project</h3>
+                        <p>Working on an IoT-based home automation system</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Robotics Competition">
+                    <div class="gallery-caption">
+                        <h3>Robotics Competition</h3>
+                        <p>Participating in a national-level robotics challenge</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Web Development">
+                    <div class="gallery-caption">
+                        <h3>Web Development</h3>
+                        <p>Creating responsive websites with modern technologies</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Drone Photography">
+                    <div class="gallery-caption">
+                        <h3>Drone Photography</h3>
+                        <p>Capturing stunning aerial views of landscapes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="College Campus">
+                    <div class="gallery-caption">
+                        <h3>NIT Hamirpur</h3>
+                        <p>Beautiful campus where I'm pursuing my B.Tech</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Martial Arts">
+                    <div class="gallery-caption">
+                        <h3>Martial Arts Practice</h3>
+                        <p>Honing my skills and discipline through martial arts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="container">
+            <h2 class="section-title">Interests & Passions</h2>
+            <div class="interests-container">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and functional websites that provide seamless user experiences and solve real-world problems.</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics</h3>
+                    <p>Building and programming robots to automate tasks and explore the fascinating intersection of mechanics and electronics.</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT</h3>
+                    <p>Developing connected devices that enhance everyday life through smart automation and data-driven insights.</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML</h3>
+                    <p>Exploring the potential of artificial intelligence and machine learning to solve complex problems and create intelligent systems.</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Capturing moments and telling stories through the lens, with a particular interest in drone photography for unique perspectives.</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-fist-raised"></i>
+                    </div>
+                    <h3>Martial Arts</h3>
+                    <p>Practicing martial arts to develop discipline, focus, and physical fitness while embracing its philosophical aspects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <h3>Academic Excellence</h3>
+                    <p>Secured 98.40% in Class X CBSE examinations, standing among the top performers in the school.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Technical Projects</h3>
+                    <p>Successfully completed several projects in web development, IoT, and robotics, showcasing technical skills and problem-solving abilities.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Leadership</h3>
+                    <p>Served as Lab Representative at Atal Tinkering Lab, mentoring junior students and leading innovative projects.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Technical Skills</h3>
+                    <p>Proficient in multiple programming languages and software tools, with practical experience in developing real-world applications.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Content Creation</h3>
+                    <p>Created engaging video content and photography, showcasing creativity and technical expertise in visual storytelling.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Martial Arts</h3>
+                    <p>Achieved significant milestones in martial arts training, demonstrating discipline, perseverance, and physical prowess.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Dotasara, Post- Patoda, Sikar, Rajasthan 332312</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(+91) 7851060889</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>ronakdotasara05@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://in.linkedin.com/in/ronak-dotasara-a35016301" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ronakdotasara" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ronak_dotasara/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ronak Dotasara. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to timeline items
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const observerOptions = {
+            threshold: 0.2
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        timelineItems.forEach(item => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

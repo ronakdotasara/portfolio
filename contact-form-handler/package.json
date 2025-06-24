@@ -1,0 +1,17 @@
+{
+  "name": "contact-form-handler",
+  "version": "1.0.0",
+  "description": "A project to handle contact form submissions with email notifications.",
+  "main": "src/js/formHandler.js",
+  "scripts": {
+    "start": "node src/js/formHandler.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11",
+    "body-parser": "^1.19.0"
+  },
+  "author": "Ronak Dotasara",
+  "license": "MIT"
+}
